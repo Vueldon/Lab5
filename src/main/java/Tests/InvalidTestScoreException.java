@@ -9,13 +9,10 @@ package Tests;
  *
  * @author vueld
  */
-public class Main
+public class InvalidTestScoreException extends Exception
 {
-    public static void main(String[] args)
+    public InvalidTestScoreException(String errorMessage)
     {
-        double[] testScores = {92, 90, 72, 80, 100, 96};
-        double average = getAverage(testScores);
-        
-        System.out.println("Average: " + average);
+        super(errorMessage);
     }
 }

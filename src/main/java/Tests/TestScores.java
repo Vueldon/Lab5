@@ -16,7 +16,7 @@ public class TestScores
         
     }
     
-    public double getAverage(double[] scores) throws Exception
+    public double getAverage(double[] scores) throws InvalidTestScoreException
     {
         double average = 0;
         
@@ -24,7 +24,7 @@ public class TestScores
         {
             if(scores[i]<0 || scores[i]>100)
             {
-                throw new Exception("All scores must be between 0 and 100, or equal to 0 or 100");
+                throw new InvalidTestScoreException("All scores must be between 0 and 100, or equal to 0 or 100");
             }
             average += scores[i];
         }
